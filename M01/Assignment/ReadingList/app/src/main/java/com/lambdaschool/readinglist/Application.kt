@@ -28,7 +28,7 @@ class App : Application() {
         super.onCreate()
 
         prefs = Prefs(applicationContext)
-        
+
         // "Timber" Library
         if (BuildConfig.DEBUG) {
             Timber.plant(MyDebugTree())

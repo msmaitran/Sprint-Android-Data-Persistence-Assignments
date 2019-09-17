@@ -2,7 +2,6 @@ package com.lambdaschool.readinglist
 
 import android.content.Context
 import android.content.SharedPreferences
-import android.graphics.Color
 import com.lambdaschool.readinglist.model.Book
 
 class Prefs(context: Context) {
