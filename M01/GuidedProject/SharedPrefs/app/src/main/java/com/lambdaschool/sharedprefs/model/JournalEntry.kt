@@ -56,8 +56,15 @@ class JournalEntry : Serializable {
 
     // TODO: 23. One approach to save an object into a String
     // converting our object into a csv string that we can handle in a constructor
-    fun toCsvString(): String {
-        return "$id,$date,$dayRating,${entryText?.replace(",", "~@")},${if (image.isNullOrBlank()) "unused" else image}"
+    internal fun toCsvString(): String {
+        return String.format(
+            "%d,%s,%d,%s,%s",
+            id,
+            date,
+            dayRating,
+            entryText?.replace(",", "~@"),
+            if (image === "") "unused" else image
+        )
     }
 
     private fun initializeDate() {
