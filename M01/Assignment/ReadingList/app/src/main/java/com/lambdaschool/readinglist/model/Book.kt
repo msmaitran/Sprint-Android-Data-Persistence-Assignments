@@ -1,8 +1,13 @@
 package com.lambdaschool.readinglist.model
 
+import java.io.Serializable
 import java.lang.NumberFormatException
 
-class Book {
+class Book : Serializable {
+
+    companion object {
+        const val TAG = "BookEntry"
+    }
 
     var title: String? = null
     var reasonToRead: String? = null
@@ -20,7 +25,7 @@ class Book {
         val values = csvString.split(",")
         if (values.size == 4) {
             this.title = values[0]
-            this.reasonToRead = values[1]
+            this.reasonToRead = values[1].replace("~@", ",")
             this.hasBeenRead = values[2].toBoolean()
             try {
                 this.id = Integer.parseInt(values[3])
@@ -30,8 +35,14 @@ class Book {
         }
     }
 
-    fun toCsvString(): String {
-        return "$title,$reasonToRead,$hasBeenRead,$id"
+    internal fun toCsvString(): String {
+        return String.format(
+            "%s,%s,%b,%d",
+            title,
+            reasonToRead?.replace(",", "~@"),
+            hasBeenRead,
+            id
+        )
     }
 
 }

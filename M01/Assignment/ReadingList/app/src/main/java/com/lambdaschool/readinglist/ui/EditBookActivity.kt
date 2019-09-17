@@ -2,6 +2,7 @@ package com.lambdaschool.readinglist.ui
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.lambdaschool.readinglist.R
 
 class EditBookActivity : AppCompatActivity() {
 
