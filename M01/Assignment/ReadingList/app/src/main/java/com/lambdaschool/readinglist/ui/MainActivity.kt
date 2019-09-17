@@ -1,7 +1,6 @@
 package com.lambdaschool.readinglist.ui
 
 
-import android.app.Activity
 import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
@@ -38,7 +37,7 @@ class MainActivity : AppCompatActivity() {
 
         i("onCreate")
 
-//        entryList = prefs.readAllEntries()
+        entryList = prefs.readAllEntries()
     }
 
     override fun onStart() {

@@ -27,7 +27,7 @@ class EditBookActivity : AppCompatActivity() {
         entry = intent.getSerializableExtra(Book.TAG) as Book
 
         et_title.setText(entry.title)
-        et_reason.setText(entry.reasonToRead)
+//        et_reason.text= entry.reasonToRead
         et_title.addTextChangedListener(object: TextWatcher {
             override fun beforeTextChanged(s: CharSequence, start: Int, count: Int, after: Int) {
             }

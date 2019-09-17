@@ -26,9 +26,9 @@ class Book : Serializable {
     var id: Int = 0
 
     constructor(id: Int) {
-        this.title = title
-        this.reasonToRead = reasonToRead
-        this.hasBeenRead = hasBeenRead
+        this.title = ""
+        this.reasonToRead = ""
+        this.hasBeenRead = false
         this.id = id
     }
 
