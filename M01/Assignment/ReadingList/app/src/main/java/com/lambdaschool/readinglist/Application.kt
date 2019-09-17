@@ -7,7 +7,6 @@ val prefs: Prefs by lazy {
     App.prefs!!
 }
 
-// TODO: 3. Extend Timber to include class, method, line numbers!
 class MyDebugTree : Timber.DebugTree() {
     override fun createStackElementTag(element: StackTraceElement): String? {
         return String.format(
@@ -21,7 +20,6 @@ class MyDebugTree : Timber.DebugTree() {
 
 class App : Application() {
 
-    // TODO: 4. Provide an Application-wide Shared Preferences
     companion object {
         var prefs: Prefs? = null
     }
@@ -30,8 +28,7 @@ class App : Application() {
         super.onCreate()
 
         prefs = Prefs(applicationContext)
-
-        // TODO: 2. Configure Timber logging
+        
         // "Timber" Library
         if (BuildConfig.DEBUG) {
             Timber.plant(MyDebugTree())
