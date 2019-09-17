@@ -6,7 +6,18 @@ import java.lang.NumberFormatException
 class Book : Serializable {
 
     companion object {
-        const val TAG = "BookEntry"
+        const val TAG = "Book"
+        const val INVALID_ID = -1
+
+        fun createBook(): Book {
+            return Book(Book.INVALID_ID)
+        }
+
+        fun createBook(text: String): Book {
+            val entry = createBook()
+            entry.title = text
+            return entry
+        }
     }
 
     var title: String? = null
@@ -14,7 +25,7 @@ class Book : Serializable {
     var hasBeenRead: Boolean = false
     var id: Int = 0
 
-    constructor(title: String, reasonToRead: String, hasBeenRead: Boolean, id: Int) {
+    constructor(id: Int) {
         this.title = title
         this.reasonToRead = reasonToRead
         this.hasBeenRead = hasBeenRead
@@ -45,4 +56,7 @@ class Book : Serializable {
         )
     }
 
+    override fun toString(): String {
+        return "Book Entry:\nTitle:$title\nReason to Read:$reasonToRead\nRead:$hasBeenRead\nID: $id"
+    }
 }
