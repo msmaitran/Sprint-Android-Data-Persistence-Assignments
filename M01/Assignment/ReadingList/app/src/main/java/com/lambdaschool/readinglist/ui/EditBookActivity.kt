@@ -82,8 +82,6 @@ class EditBookActivity : AppCompatActivity() {
         i("onResume")
     }
 
-    // user interacting with app
-
     override fun onPause() {
         super.onPause()
         i("onPause")
