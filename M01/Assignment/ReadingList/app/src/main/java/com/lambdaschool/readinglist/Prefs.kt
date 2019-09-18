@@ -7,7 +7,7 @@ import com.lambdaschool.readinglist.model.Book
 class Prefs(context: Context) {
 
     companion object {
-        private const val JOURNAL_PREFERENCES = "JournalPreferences"
+        private const val Book_PREFERENCES = "BookPreferences"
 
         private const val ID_LIST_KEY = "id_list"
         private const val NEXT_ID_KEY = "next_id"
@@ -16,7 +16,7 @@ class Prefs(context: Context) {
     }
 
     val sharedPrefs: SharedPreferences =
-        context.getSharedPreferences(JOURNAL_PREFERENCES, Context.MODE_PRIVATE)
+        context.getSharedPreferences(Book_PREFERENCES, Context.MODE_PRIVATE)
 
     // create a new entry
     fun createEntry(entry: Book) {

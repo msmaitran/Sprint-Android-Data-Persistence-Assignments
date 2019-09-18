@@ -27,7 +27,6 @@ class EditBookActivity : AppCompatActivity() {
         entry = intent.getSerializableExtra(Book.TAG) as Book
 
         et_title.setText(entry.title)
-//        et_reason.text= entry.reasonToRead
         et_title.addTextChangedListener(object: TextWatcher {
             override fun beforeTextChanged(s: CharSequence, start: Int, count: Int, after: Int) {
             }
@@ -40,6 +39,33 @@ class EditBookActivity : AppCompatActivity() {
                 entry.title = entryString
             }
         })
+        et_reason.setText(entry.reasonToRead)
+        et_reason.addTextChangedListener(object: TextWatcher {
+            override fun beforeTextChanged(s: CharSequence, start: Int, count: Int, after: Int) {
+            }
+
+            override fun onTextChanged(s: CharSequence, start: Int, before: Int, count: Int) {
+            }
+
+            override fun afterTextChanged(s: Editable) {
+                val entryString = s.toString()
+                entry.reasonToRead = entryString
+            }
+        })
+
+        if (entry.hasBeenRead == false) {
+            cb_read.isChecked = false
+        } else {
+            cb_read.isChecked = true
+        }
+
+        cb_read.setOnClickListener {
+            if (cb_read.isChecked == false) {
+                entry.hasBeenRead = false
+            } else {
+                entry.hasBeenRead = true
+            }
+        }
     }
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {

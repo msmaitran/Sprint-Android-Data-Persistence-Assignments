@@ -1,5 +1,7 @@
 <resources>
     <string name="app_name">Reading List</string>
     <string name="title">Title</string>
-    <string name="menu_save_title">SAVE</string>
+    <string name="reason">Reason</string>
+    <string name="read">Read</string>
+    <string name="menu_save_title">Save</string>
 </resources>
