@@ -1,8 +1,6 @@
 package com.lambdaschool.sharedprefs
 
 import android.content.Context
-import android.content.SharedPreferences
-import android.graphics.Color
 import android.os.Environment
 import com.lambdaschool.sharedprefs.model.JournalEntry
 import org.json.JSONException

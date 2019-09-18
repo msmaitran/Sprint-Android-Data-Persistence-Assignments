@@ -3,9 +3,8 @@ package com.lambdaschool.readinglist
 import android.app.Application
 import timber.log.Timber
 
-// Change to the repo interface here
-val repo: BookRepoInterface by lazy {
-    App.repo!!
+val prefs: Prefs by lazy {
+    App.prefs!!
 }
 
 class MyDebugTree : Timber.DebugTree() {
@@ -22,14 +21,13 @@ class MyDebugTree : Timber.DebugTree() {
 class App : Application() {
 
     companion object {
-        var repo: BookRepoInterface? = null
+        var prefs: Prefs? = null
     }
 
     override fun onCreate() {
         super.onCreate()
 
-        // Instantiate the File repo here instead of Prefs
-        repo = BookFileRepo(applicationContext)
+        prefs = Prefs(applicationContext)
 
         // "Timber" Library
         if (BuildConfig.DEBUG) {

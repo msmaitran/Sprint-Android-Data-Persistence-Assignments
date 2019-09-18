@@ -8,7 +8,7 @@ import android.widget.TextView
 import com.lambdaschool.readinglist.R
 import com.lambdaschool.readinglist.model.Book
 import com.lambdaschool.readinglist.model.Book.Companion.createBook
-import com.lambdaschool.readinglist.repo
+import com.lambdaschool.readinglist.prefs
 
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.content_main.*
@@ -37,7 +37,7 @@ class MainActivity : AppCompatActivity() {
 
         i("onCreate")
 
-        entryList = repo.readAllEntries()
+        entryList = prefs.readAllEntries()
     }
 
     override fun onStart() {
@@ -94,15 +94,15 @@ class MainActivity : AppCompatActivity() {
         if (resultCode == RESULT_OK) {
             if (requestCode == NEW_ENTRY_REQUEST) {
                 if (data != null) {
-                    var entry = data.getSerializableExtra(Book.TAG) as Book
+                    val entry = data.getSerializableExtra(Book.TAG) as Book
                     entryList.add(entry)
-                    repo.createEntry(entry)
+                    prefs.createEntry(entry)
                 }
             } else if (requestCode == EDIT_ENTRY_REQUEST) {
                 if (data != null) {
-                    var entry = data.getSerializableExtra(Book.TAG) as Book
+                    val entry = data.getSerializableExtra(Book.TAG) as Book
                     entryList[entry.id] = entry
-                    repo.updateEntry(entry)
+                    prefs.updateEntry(entry)
                 }
             }
         }

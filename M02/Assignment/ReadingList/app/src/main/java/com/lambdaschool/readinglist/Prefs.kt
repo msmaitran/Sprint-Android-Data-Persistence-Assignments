@@ -4,8 +4,7 @@ import android.content.Context
 import android.content.SharedPreferences
 import com.lambdaschool.readinglist.model.Book
 
-// Declare implementation of interface here and add overrides
-class Prefs(context: Context): BookRepoInterface {
+class Prefs(context: Context) {
 
     companion object {
         private const val Book_PREFERENCES = "BookPreferences"
@@ -20,7 +19,7 @@ class Prefs(context: Context): BookRepoInterface {
         context.getSharedPreferences(Book_PREFERENCES, Context.MODE_PRIVATE)
 
     // create a new entry
-    override fun createEntry(entry: Book) {
+    fun createEntry(entry: Book) {
         // read list of entry ids
         val ids = getListOfIds()
 
@@ -31,7 +30,7 @@ class Prefs(context: Context): BookRepoInterface {
             var nextId = sharedPrefs.getInt(NEXT_ID_KEY, 0)
             entry.id = nextId
             // store updated next id
-            editor.putInt(NEXT_ID_KEY, ++nextId)
+            editor.putInt(NEXT_ID_KEY, nextId++)
 
             // add id to list of ids
 
@@ -74,7 +73,7 @@ class Prefs(context: Context): BookRepoInterface {
     }
 
     // read all entries
-    override fun readAllEntries(): MutableList<Book> {
+    fun readAllEntries(): MutableList<Book> {
         // read list of entry ids
         val listOfIds = getListOfIds()
 
@@ -91,13 +90,9 @@ class Prefs(context: Context): BookRepoInterface {
     }
 
     // edit an existing entry
-    override fun updateEntry(entry: Book) {
+    fun updateEntry(entry: Book) {
         val editor = sharedPrefs.edit()
         editor.putString(ENTRY_ID_KEY_PREFIX + entry.id, entry.toCsvString())
         editor.apply()
-    }
-
-    override fun deleteEntry(entry: Book) {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
     }
 }
