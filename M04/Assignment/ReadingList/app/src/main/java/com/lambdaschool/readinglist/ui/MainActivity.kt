@@ -8,10 +8,12 @@ import androidx.appcompat.app.AppCompatActivity
 import android.widget.TextView
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.Observer
+import androidx.lifecycle.ViewModelProviders
 import com.lambdaschool.readinglist.R
 import com.lambdaschool.readinglist.model.Book
 import com.lambdaschool.readinglist.model.Book.Companion.createBook
 import com.lambdaschool.readinglist.repo
+import com.lambdaschool.readinglist.viewmodel.EntriesViewModel
 
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.content_main.*
@@ -25,12 +27,15 @@ class MainActivity : AppCompatActivity() {
         const val EDIT_ENTRY_REQUEST = 1
     }
 
-    private var entryList = mutableListOf<Book>()
+    lateinit var viewModel: EntriesViewModel
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         setSupportActionBar(toolbar)
+
+        // Get a ViewModel
+        viewModel = ViewModelProviders.of(this).get(EntriesViewModel::class.java)
 
         btn_add.setOnClickListener { view ->
             val newEntryIntent = Intent(this@MainActivity, EditBookActivity::class.java)
