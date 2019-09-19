@@ -1,15 +1,20 @@
 package com.lambdaschool.readinglist.model
 
+import androidx.annotation.NonNull
+import androidx.room.Entity
+import androidx.room.PrimaryKey
 import org.json.JSONException
 import org.json.JSONObject
 import java.io.Serializable
 import java.lang.NumberFormatException
 
+// Annotate the Entity
+@Entity
 class Book : Serializable {
 
     companion object {
         const val TAG = "Book"
-        const val INVALID_ID = -1
+        const val INVALID_ID = 0
 
         fun createBook(): Book {
             return Book(Book.INVALID_ID)
@@ -19,6 +24,9 @@ class Book : Serializable {
     var title: String? = null
     var reasonToRead: String? = null
     var hasBeenRead: Boolean = false
+
+    // Make the id the primary key
+    @PrimaryKey(autoGenerate = true) @NonNull
     var id: Int = 0
 
     constructor(id: Int) {
