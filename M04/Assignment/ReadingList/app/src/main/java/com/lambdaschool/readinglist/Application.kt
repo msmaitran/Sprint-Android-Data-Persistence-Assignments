@@ -1,6 +1,7 @@
 package com.lambdaschool.readinglist
 
 import android.app.Application
+import com.lambdaschool.readinglist.database.BookDBRepo
 import timber.log.Timber
 
 // Change to the repo interface here
@@ -28,8 +29,8 @@ class App : Application() {
     override fun onCreate() {
         super.onCreate()
 
-        // Instantiate the File repo here instead of Prefs
-        repo = BookFileRepo(applicationContext)
+        // Instantiate the DB repo here
+        repo = BookDBRepo(applicationContext)
 
         // "Timber" Library
         if (BuildConfig.DEBUG) {
