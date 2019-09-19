@@ -90,7 +90,7 @@ class MainActivity : AppCompatActivity() {
     private fun buildItemView(entry: Book): TextView {
         val view = TextView(this@MainActivity)
         view.text = entry.title
-        view.setPadding(15, 15, 15, 15)
+        view.setPadding(40, 4, 40, 4)
         view.textSize = 24f
         view.setOnClickListener {
             val viewEditBookIntent = Intent(this@MainActivity, EditBookActivity::class.java)
