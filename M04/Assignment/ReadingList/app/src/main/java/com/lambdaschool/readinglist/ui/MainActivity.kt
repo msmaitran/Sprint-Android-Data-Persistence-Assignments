@@ -53,9 +53,12 @@ class MainActivity : AppCompatActivity() {
         super.onResume()
 
         i("onResume")
+    }
 
+    // Extract update functionality
+    private fun updateForEntries(entries: List<Book>) {
         ll_list.removeAllViews()
-        entryList.forEach { entry ->
+        entries.forEach { entry ->
             ll_list.addView(buildItemView(entry))
         }
     }
