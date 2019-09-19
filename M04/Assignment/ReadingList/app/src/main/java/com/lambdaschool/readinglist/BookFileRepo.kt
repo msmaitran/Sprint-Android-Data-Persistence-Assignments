@@ -2,6 +2,8 @@ package com.lambdaschool.readinglist
 
 import android.content.Context
 import android.os.Environment
+import androidx.lifecycle.LiveData
+import androidx.lifecycle.MutableLiveData
 import com.lambdaschool.readinglist.model.Book
 import org.json.JSONException
 import org.json.JSONObject
@@ -9,6 +11,22 @@ import java.io.*
 
 // Implement the interface here
 class BookFileRepo(var context: Context): BookRepoInterface {
+
+    override fun updateEntry(entry: Book) {
+        createEntry(entry)
+    }
+
+    override fun deleteEntry(entry: Book) {
+        val filename = "bookEntry${entry.title}.json"
+        if (filename.contains(filename)) {
+            val deleteFile = File(storageDirectory, filename)
+            try {
+                deleteFile.delete()
+            } catch (e: IOException) {
+                e.printStackTrace()
+            }
+        }
+    }
 
     // createEntry implementation
     override fun createEntry(entry: Book) {
@@ -65,7 +83,7 @@ class BookFileRepo(var context: Context): BookRepoInterface {
         }
 
     // readAllEntries implementation
-    override fun readAllEntries(): MutableList<Book> {
+    override fun readAllEntries(): LiveData<List<Book>> {
         // Get fileList
         val entries = ArrayList<Book>()
 
@@ -79,7 +97,9 @@ class BookFileRepo(var context: Context): BookRepoInterface {
                 e.printStackTrace()
             }
         }
-        return entries
+        val liveData = MutableLiveData<List<Book>>()
+        liveData.postValue(entries)
+        return liveData
     }
 
     // Save fileList as a member variable
@@ -120,13 +140,5 @@ class BookFileRepo(var context: Context): BookRepoInterface {
             }
         }
         return readString ?: ""
-    }
-
-    override fun updateEntry(entry: Book) {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
-    }
-
-    override fun deleteEntry(entry: Book) {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
     }
 }

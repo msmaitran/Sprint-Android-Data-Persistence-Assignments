@@ -131,7 +131,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     // Update AsyncTask
-    class UpdateAsyncTask(viewMode: EntriesViewModel) : AsyncTask<Book, Void, Unit>() {
+    class UpdateAsyncTask(viewModel: EntriesViewModel) : AsyncTask<Book, Void, Unit>() {
         private val viewModel = WeakReference(viewModel)
         override fun doInBackground(vararg entries: Book?) {
             if (entries.isNotEmpty()) {
