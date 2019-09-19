@@ -1,12 +1,14 @@
 package com.lambdaschool.readinglist
 
+import androidx.lifecycle.LiveData
 import com.lambdaschool.readinglist.model.Book
 
-// Extract behavior from Prefs to an interface
+// Database repo to implement this interface
 interface BookRepoInterface {
 
     fun createEntry(entry: Book)
-    fun readAllEntries(): MutableList<Book>
+    // LiveData in the interface
+    fun readAllEntries(): LiveData<List<Book>>
     fun updateEntry(entry: Book)
     fun deleteEntry(entry: Book)
 }
