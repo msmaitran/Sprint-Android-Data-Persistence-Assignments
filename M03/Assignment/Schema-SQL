@@ -1,0 +1,237 @@
+CREATE TABLE players (
+  first_name TEXT,
+  last_name TEXT,
+  age INTEGER,
+  id INTEGER PRIMARY KEY,
+  fifa_code TEXT
+);
+
+INSERT INTO players (first_name, last_name, age, id, fifa_code)
+VALUES ("Megan", "Rapinoe", 34, 1, "USA");
+
+INSERT INTO players (first_name, last_name, age, id, fifa_code)
+VALUES ("Alex", "Morgan", 30, 2, "USA");
+
+INSERT INTO players (first_name, last_name, age, id, fifa_code)
+VALUES ("Ellen", "White", 30, 3, "ENG");
+
+INSERT INTO players (first_name, last_name, age, id, fifa_code)
+VALUES ("Sam", "Kerr", 26, 4, "AUS");
+
+INSERT INTO players (first_name, last_name, age, id, fifa_code)
+VALUES ("", "Christiane", 34, 5, "BRA");
+
+INSERT INTO players (first_name, last_name, age, id, fifa_code)
+VALUES ("Wendie", "Renard", 29, 6, "FRA");
+
+INSERT INTO players (first_name, last_name, age, id, fifa_code)
+VALUES ("Sara", "Daebritz", 24, 7, "GER");
+
+INSERT INTO players (first_name, last_name, age, id, fifa_code)
+VALUES ("Kosovare", "Asllani", 30, 8, "SWE");
+
+INSERT INTO players (first_name, last_name, age, id, fifa_code)
+VALUES ("Carli", "Lloyd", 37, 9, "USA");
+
+INSERT INTO players (first_name, last_name, age, id, fifa_code)
+VALUES ("Cristiana", "Girelli", 29, 10, "ITA");
+
+INSERT INTO players (first_name, last_name, age, id, fifa_code)
+VALUES ("Aurora", "Galli", 22, 11, "ITA");
+
+INSERT INTO players (first_name, last_name, age, id, fifa_code)
+VALUES ("Jennifer", "Hermoso", 29, 12, "ESP");
+
+INSERT INTO players (first_name, last_name, age, id, fifa_code)
+VALUES ("Rose", "Lavelle", 24, 13, "USA");
+
+INSERT INTO players (first_name, last_name, age, id, fifa_code)
+VALUES ("Vivianne", "Miedema", 23, 14, "NED");
+
+INSERT INTO players (first_name, last_name, age, id, fifa_code)
+VALUES ("Samantha", "Mewis", 26, 15, "USA");
+
+INSERT INTO players (first_name, last_name, age, id, fifa_code)
+VALUES ("Lindsey", "Horan", 25, 16, "USA");
+
+INSERT INTO players (first_name, last_name, age, id, fifa_code)
+VALUES ("Lina", "Magull", 25, 17, "GER");
+
+INSERT INTO players (first_name, last_name, age, id, fifa_code)
+VALUES ("Eugenie", "Le Sommer", 30, 18, "FRA");
+
+INSERT INTO players (first_name, last_name, age, id, fifa_code)
+VALUES ("Amandine", "Henry", 29, 19, "FRA");
+
+INSERT INTO players (first_name, last_name, age, id, fifa_code)
+VALUES ("Stina", "Blackstenius", 23, 20, "SWE");
+
+INSERT INTO players (first_name, last_name, age, id, fifa_code)
+VALUES ("", "Marta", 33, 21, "BRA");
+
+INSERT INTO players (first_name, last_name, age, id, fifa_code)
+VALUES ("Ajara", "Nchout", 26, 22, "CMR");
+
+INSERT INTO players (first_name, last_name, age, id, fifa_code)
+VALUES ("Valerie", "Gauvin", 23, 23, "FRA");
+
+INSERT INTO players (first_name, last_name, age, id, fifa_code)
+VALUES ("Barbara", "Bonansea", 28, 24, "ITA");
+
+INSERT INTO players (first_name, last_name, age, id, fifa_code)
+VALUES ("Isabell", "Herlovsen", 31, 25, "NOR");
+
+INSERT INTO players (first_name, last_name, age, id, fifa_code)
+VALUES ("Alexandra", "Popp", 28, 26, "GER");
+
+INSERT INTO players (first_name, last_name, age, id, fifa_code)
+VALUES ("Lieke", "Martens", 26, 27, "NED");
+
+INSERT INTO players (first_name, last_name, age, id, fifa_code)
+VALUES ("Sofia", "Jakobsson", 29, 28, "SWE");
+
+INSERT INTO players (first_name, last_name, age, id, fifa_code)
+VALUES ("Lucy", "Bronze", 27, 29, "ENG");
+
+INSERT INTO players (first_name, last_name, age, id, fifa_code)
+VALUES ("Mallory", "Pugh", 21, 30, "USA");
+
+INSERT INTO players (first_name, last_name, age, id, fifa_code)
+VALUES ("Nichelle", "Prince", 24, 31, "CAN");
+
+INSERT INTO players (first_name, last_name, age, id, fifa_code)
+VALUES ("Lucia", "Garcia", 21, 32, "ESP");
+
+INSERT INTO players (first_name, last_name, age, id, fifa_code)
+VALUES ("Christen", "Press", 30, 33, "USA");
+
+INSERT INTO players (first_name, last_name, age, id, fifa_code)
+VALUES ("Lineth", "Beerensteyn", 22, 34, "NED");
+
+INSERT INTO players (first_name, last_name, age, id, fifa_code)
+VALUES ("Erin", "Cuthbert", 21, 35, "SCO");
+
+INSERT INTO players (first_name, last_name, age, id, fifa_code)
+VALUES ("Mana", "Iwabuchi", 26, 36, "JPN");
+
+INSERT INTO players (first_name, last_name, age, id, fifa_code)
+VALUES ("Chloe", "Logarzo", 24, 37, "AUS");
+
+INSERT INTO players (first_name, last_name, age, id, fifa_code)
+VALUES ("Elin", "Rubensson", 26, 38, "SWE");
+
+INSERT INTO players (first_name, last_name, age, id, fifa_code)
+VALUES ("Caroline", "Graham Hansen", 24, 39, "NOR");
+
+INSERT INTO players (first_name, last_name, age, id, fifa_code)
+VALUES ("Giulia", "Gwinn", 20, 40, "GER");
+
+INSERT INTO players (first_name, last_name, age, id, fifa_code)
+VALUES ("Fran", "Kirby", 26, 41, "ENG");
+
+INSERT INTO players (first_name, last_name, age, id, fifa_code)
+VALUES ("Guro", "Reiten", 25, 42, "NOR");
+
+INSERT INTO players (first_name, last_name, age, id, fifa_code)
+VALUES ("Nikita", "Parris", 25, 43, "ENG");
+
+INSERT INTO players (first_name, last_name, age, id, fifa_code)
+VALUES ("Jill", "Scott", 32, 44, "ENG");
+
+INSERT INTO players (first_name, last_name, age, id, fifa_code)
+VALUES ("Linda", "Sembrant", 32, 45, "SWE");
+
+INSERT INTO players (first_name, last_name, age, id, fifa_code)
+VALUES ("Lana", "Clelland", 26, 46, "SCO");
+
+INSERT INTO players (first_name, last_name, age, id, fifa_code)
+VALUES ("Milagros", "Menendez", 22, 47, "ARG");
+
+INSERT INTO players (first_name, last_name, age, id, fifa_code)
+VALUES ("Madelen", "Janogy", 23, 48, "SWE");
+
+INSERT INTO players (first_name, last_name, age, id, fifa_code)
+VALUES ("Yeo", "Minji", 26, 49, "KOR");
+
+INSERT INTO players (first_name, last_name, age, id, fifa_code)
+VALUES ("Jill", "Roord", 22, 50, "NED");
+
+CREATE TABLE teams (
+  id INTEGER PRIMARY KEY,
+  name TEXT,
+  fifa_code TEXT,
+  group_id INTEGER,
+  group_letter TEXT
+);
+
+INSERT INTO teams (id, name, fifa_code, group_id, group_letter)
+VALUES (17, "Canada", "CAN", 5, "E");
+
+INSERT INTO teams (id, name, fifa_code, group_id, group_letter)
+VALUES (14, "Scotland", "SCO", 4, "D");
+
+INSERT INTO teams (id, name, fifa_code, group_id, group_letter)
+VALUES (9, "Australia", "AUS", 3, "C");
+
+INSERT INTO teams (id, name, fifa_code, group_id, group_letter)
+VALUES (15, "Argentina", "ARG", 4, "D");
+
+INSERT INTO teams (id, name, fifa_code, group_id, group_letter)
+VALUES (10, "Italy", "ITA", 3, "C");
+
+INSERT INTO teams (id, name, fifa_code, group_id, group_letter)
+VALUES (19, "New Zealand", "NZL", 5, "E");
+
+INSERT INTO teams (id, name, fifa_code, group_id, group_letter)
+VALUES (2, "Korea Republic", "KOR", 1, "A");
+
+INSERT INTO teams (id, name, fifa_code, group_id, group_letter)
+VALUES (22, "Thailand", "THA", 6, "F");
+
+INSERT INTO teams (id, name, fifa_code, group_id, group_letter)
+VALUES (23, "Chile", "CHI", 6, "F");
+
+INSERT INTO teams (id, name, fifa_code, group_id, group_letter)
+VALUES (6, "China PR", "CHN", 2, "B");
+
+INSERT INTO teams (id, name, fifa_code, group_id, group_letter)
+VALUES (16, "Japan", "JPN", 4, "D");
+
+INSERT INTO teams (id, name, fifa_code, group_id, group_letter)
+VALUES (13, "England", "ENG", 4, "D");
+
+INSERT INTO teams (id, name, fifa_code, group_id, group_letter)
+VALUES (3, "Norway", "NOR", 1, "A");
+
+INSERT INTO teams (id, name, fifa_code, group_id, group_letter)
+VALUES (11, "Brazil", "BRA", 3, "C");
+
+INSERT INTO teams (id, name, fifa_code, group_id, group_letter)
+VALUES (24, "Sweden", "SWE", 6, "F");
+
+INSERT INTO teams (id, name, fifa_code, group_id, group_letter)
+VALUES (8, "South Africa", "RSA", 2, "B");
+
+INSERT INTO teams (id, name, fifa_code, group_id, group_letter)
+VALUES (18, "Cameroon", "CMR", 5, "E");
+
+INSERT INTO teams (id, name, fifa_code, group_id, group_letter)
+VALUES (12, "Jamaica", "JAM", 3, "C");
+
+INSERT INTO teams (id, name, fifa_code, group_id, group_letter)
+VALUES (21, "USA", "USA", 6, "F");
+
+INSERT INTO teams (id, name, fifa_code, group_id, group_letter)
+VALUES (1, "France", "FRA", 1, "A");
+
+INSERT INTO teams (id, name, fifa_code, group_id, group_letter)
+VALUES (20, "Netherlands", "NED", 5, "E");
+
+INSERT INTO teams (id, name, fifa_code, group_id, group_letter)
+VALUES (5, "Germany", "GER", 2, "B");
+
+INSERT INTO teams (id, name, fifa_code, group_id, group_letter)
+VALUES (4, "Nigeria", "NGA", 1, "A");
+
+INSERT INTO teams (id, name, fifa_code, group_id, group_letter)
+VALUES (7, "Spain", "ESP", 2, "B");

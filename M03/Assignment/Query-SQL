@@ -1,0 +1,13 @@
+SELECT * FROM players;
+
+SELECT first_name FROM players;
+
+SELECT first_name, last_name FROM players WHERE fifa_code="USA";
+
+SELECT first_name, last_name FROM players WHERE id<11;
+
+UPDATE players SET first_name="N/A" WHERE first_name LIKE "";
+SELECT * FROM players;
+
+DELETE FROM players WHERE first_name="N/A";
+SELECT * FROM players;
